@@ -113,12 +113,13 @@ const Home = () => {
             </h1>
             <p>Stream and download your favorite movies and TV shows in stunning quality</p>
             <motion.button 
-              className="cta-button"
+              className="download-btn primary-cta"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleDownload}
             >
-              Get Started
+              <i className="fas fa-download"></i>
+              Download Now
             </motion.button>
           </motion.div>
 

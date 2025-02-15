@@ -762,3 +762,44 @@ html {
   z-index: -1;
   border-radius: 50px;
 }
+
+/* Add new download button styles */
+.primary-cta {
+  background: linear-gradient(45deg, var(--accent), var(--secondary));
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 4px 15px rgba(139, 107, 243, 0.3);
+  transition: all 0.3s ease;
+}
+
+.primary-cta i {
+  font-size: 1.2rem;
+}
+
+.primary-cta:hover {
+  box-shadow: 0 6px 20px rgba(139, 107, 243, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Update responsive styles for the new button */
+@media (max-width: 768px) {
+  .primary-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .primary-cta i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .primary-cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
