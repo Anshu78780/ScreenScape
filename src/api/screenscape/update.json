@@ -1,0 +1,14 @@
+{
+    "version": "0.0.2",
+    "versionCode": 2,
+    "minSupportedVersion": "0.0.1",
+    "downloadUrl": "https://screenscape.fun/downloads/screenscape-v0.0.2.apk",
+    "releaseNotes": [
+      "Bug fixes and improvements",
+      "Added new features",
+      "Performance optimizations"
+    ],
+    "isForceUpdate": false,
+    "updateDate": "2024-03-20",
+    "fileSize": "15.2MB"
+  }
