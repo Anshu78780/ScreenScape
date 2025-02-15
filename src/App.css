@@ -346,11 +346,15 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 5%;
+    padding: 0.8rem 1rem;
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
   }
 
   .nav-links a {
@@ -358,12 +362,86 @@ footer a:hover {
   }
 
   .hero-section {
-    padding: 6rem 5% 2rem;
+    padding: 5rem 1rem 2rem;
   }
 
-  .features-section,
-  .about-section {
-    padding: 4rem 5%;
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .device-wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .device-notch {
+    width: 120px;
+    height: 20px;
+  }
+
+  .screenshot-dots {
+    bottom: 15px;
+    padding: 4px 8px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .text-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-section {
+    padding: 4rem 1rem 1rem;
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .device-wrapper {
+    max-width: 220px;
   }
 }
 
