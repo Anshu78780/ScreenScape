@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Features from './pages/Features'
 import About from './pages/About'
 import './App.css'
-import { Analytics } from "@vercel/analytics/react"
 import appScreen1 from './assets/app-screen1.png'
 import appScreen2 from './assets/app-screen2.png'
 import appScreen3 from './assets/app-screen3.png'
@@ -166,8 +165,8 @@ const Home = () => {
 
 const handleDownload = () => {
   const link = document.createElement('a')
-  link.href = 'https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-v0.0.5.apk'
-  link.download =`https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-v0.0.5.apk`
+  link.href = 'https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.6.apk'
+  link.download =`https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.6.apk`
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
