@@ -165,8 +165,8 @@ const Home = () => {
 
 const handleDownload = () => {
   const link = document.createElement('a')
-  link.href = APP_DOWNLOAD_URL
-  link.download = `screenscape-v${APP_VERSION}.apk`
+  link.href = 'https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-v0.0.5.apk'
+  link.download =`https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-v0.0.5.apk`
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
