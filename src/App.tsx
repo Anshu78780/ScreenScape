@@ -90,29 +90,24 @@ function App() {
 // Home component
 const Home = () => {
   const [currentScreen, setCurrentScreen] = useState(0)
-  const typedText = useTypewriter('Your Ultimate Movie Experience By Pratik', 100)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentScreen((prev) => (prev + 1) % screenshots.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+  const typedText = useTypewriter('Your Ultimate Movie Experience', 100)
 
   return (
-    <div className="gradient-bg">
-      <section className="hero-section">
-        <div className="hero-content">
-          <motion.div 
-            className="text-content"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1>
-              {typedText}<span className="cursor">|</span>
-            </h1>
-            <p>Stream and download your favorite movies and TV shows in stunning quality</p>
+    <div className="hero-container">
+      <div className="hero-content">
+        <motion.div 
+          className="text-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="gradient-text">
+            {typedText}<span className="cursor">|</span>
+          </h1>
+          <p className="hero-description">
+            Stream and download your favorite movies and TV shows in stunning quality
+          </p>
+          <div className="cta-group">
             <motion.button 
               className="download-btn primary-cta"
               whileHover={{ scale: 1.05 }}
@@ -120,47 +115,51 @@ const Home = () => {
               onClick={handleDownload}
             >
               <i className="fas fa-download"></i>
-              Download Now
+              Download v0.0.5
             </motion.button>
-          </motion.div>
+            <div className="download-info">
+              <span className="version-tag">Latest Version</span>
+              <span className="download-count">10K+ Downloads</span>
+            </div>
+          </div>
+        </motion.div>
 
-          <motion.div 
-            className="app-preview"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-          <Analytics />
-            <div className="device-wrapper">
-              <div className="device-notch"></div>
-              <div className="screenshot-container">
-                <div 
-                  className="screenshot-slider" 
-                  style={{ transform: `translateX(-${currentScreen * 100}%)` }}
-                >
-                  {screenshots.map((screen, index) => (
-                    <img 
-                      key={index}
-                      src={screen} 
-                      alt={`App Screenshot ${index + 1}`}
-                      className="screenshot"
-                    />
-                  ))}
-                </div>
-                <div className="screenshot-dots">
-                  {screenshots.map((_, index) => (
-                    <div 
-                      key={index} 
-                      className={`dot ${currentScreen === index ? 'active' : ''}`}
-                      onClick={() => setCurrentScreen(index)}
-                    />
-                  ))}
-                </div>
+        <motion.div 
+          className="preview-section"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+        >
+          <div className="device-frame">
+            <div className="device-notch"></div>
+            <div className="screenshot-wrapper">
+              <div 
+                className="screenshot-slider" 
+                style={{ transform: `translateX(-${currentScreen * 100}%)` }}
+              >
+                {screenshots.map((screen, index) => (
+                  <img 
+                    key={index}
+                    src={screen} 
+                    alt={`App Screenshot ${index + 1}`}
+                    className="screenshot"
+                  />
+                ))}
+              </div>
+              <div className="screenshot-dots">
+                {screenshots.map((_, index) => (
+                  <div 
+                    key={index} 
+                    className={`dot ${currentScreen === index ? 'active' : ''}`}
+                    onClick={() => setCurrentScreen(index)}
+                  />
+                ))}
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+          <div className="glow-effect"></div>
+        </motion.div>
+      </div>
     </div>
   )
 }
