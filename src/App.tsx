@@ -9,7 +9,7 @@ import appScreen2 from './assets/app-screen2.png'
 import appScreen3 from './assets/app-screen3.png'
 
 // Constants
-const APP_VERSION = '0.0.2'
+const APP_VERSION = '0.0.5'
 const APP_DOWNLOAD_URL = `/downloads/screenscape-v${APP_VERSION}.apk`
 
 // Custom hook for typewriter effect (Fixed)
