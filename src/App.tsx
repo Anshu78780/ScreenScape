@@ -114,7 +114,7 @@ const Home = () => {
               onClick={handleDownload}
             >
               <i className="fas fa-download"></i>
-              Download v0.0.6 with Netflix 
+              Update Now v0.0.6 with Netflix 
             </motion.button>
             <div className="download-info">
               <span className="version-tag">Latest Version</span>
