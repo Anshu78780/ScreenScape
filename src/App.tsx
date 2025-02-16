@@ -89,7 +89,7 @@ function App() {
 // Home component
 const Home = () => {
   const [currentScreen, setCurrentScreen] = useState(0)
-  const typedText = useTypewriter('Your Ultimate Movie Experience', 100)
+  const typedText = useTypewriter('Your Ultimate Movie Experience By Pratik', 100)
 
   useEffect(() => {
     const interval = setInterval(() => {
