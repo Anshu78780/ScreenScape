@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Features from './pages/Features'
 import About from './pages/About'
 import './App.css'
+import { Analytics } from "@vercel/analytics/react"
 import appScreen1 from './assets/app-screen1.png'
 import appScreen2 from './assets/app-screen2.png'
 import appScreen3 from './assets/app-screen3.png'
@@ -129,6 +130,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
           >
+          <Analytics />
             <div className="device-wrapper">
               <div className="device-notch"></div>
               <div className="screenshot-container">
