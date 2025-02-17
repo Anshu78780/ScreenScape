@@ -114,7 +114,7 @@ const Home = () => {
               onClick={handleDownload}
             >
               <i className="fas fa-download"></i>
-              Update Now v0.0.6 with Netflix 
+              Update Now v0.0.7 with Netflix 
             </motion.button>
             <div className="download-info">
               <span className="version-tag">Latest Version</span>
@@ -165,8 +165,8 @@ const Home = () => {
 
 const handleDownload = () => {
   const link = document.createElement('a')
-  link.href = 'https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.6.apk'
-  link.download =`https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.6.apk`
+  link.href = 'https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.7.apk'
+  link.download =`https://github.com/Anshu78780/App-Release/releases/download/v0.0.5/ScreenScape-arm64-v8a-v0.0.7.apk`
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
